@@ -1,6 +1,7 @@
 
 var express = require('express');
 var app = express();
+var absolutePath = __dirname + "/views/index.html"
 
 // --> 7)  Mount the Logger middleware here
 
@@ -13,7 +14,7 @@ console.log("Hello World");
 
 /** 2) A first working Express Server */
 app.get('/', function(req, res){
-res.send('Hello Express');})
+res.sendFile(absolutePath);})
 
 /** 3) Serve an HTML file */
 
